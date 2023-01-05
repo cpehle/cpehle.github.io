@@ -9,28 +9,25 @@
   <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
   <body class="sans-serif">
     <nav class="pa3 pa4-ns">
-        <a class="link dim black b f6 f5-ns dib mr3" href="#" title="Home">Christian Pehle</a>
-        <a class="link dim gray    f6 f5-ns dib mr3" href="/#research" title="Research">Research</a>
+        <a class="link dim black b f6 f5-ns dib mr3" href="#" title="Home">About</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="/#projects" title="Projects">Projects</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="/blog/" title="Blog">Blog</a>
 
         <a class="link dim gray    f6 f5-ns dib mr3" href="#" title="CV">CV</a>
-        <a class="link dim gray    f6 f5-ns dib mr3" href="https://github.com/cpehle" title="Github">Github</a>
-        <a class="link dim gray    f6 f5-ns dib mr3" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en" title="Publications">Publications</a>
         <a class="link dim gray    f6 f5-ns dib" href="/#contact" title="Contact">Contact</a>
     </nav>
     <section class="pa3 pa4-ns sans-serif">   
         <div class="cf">
             <div class="fl w-100 w-20-ns">
                 <img src="photos/portrait.png" class="f5 w-100 measure"/>
-                <h4 class="f4 f5-ns w-100">Dr. Christian Pehle</h4>
+                <h4 class="f3 f4-ns w-100 fw2">Dr. Christian Pehle</h4>
             </div>
             <div class="fl f6 w-100 w-80-ns ph4 serif lh-copy">
                 <p class>
-                    I am a physicist, currently working as a PostDoc as part of the <a href="https://www.structures.uni-heidelberg.de/index.php" class="link blue dim">STRUCTURES Cluster of Excellence</a> at the University of Heidelberg.
+                    I am a physicist, currently working as a PostDoc as part of the <a href="https://www.structures.uni-heidelberg.de/index.php" class="link blue dim">STRUCTURES Cluster of Excellence</a> at the University of Heidelberg. I love working on challenging open ended questions, which can by approached theoretically but have practical constraints.
                     </p>
                         <p class>
-                            I study learning algorithms for spiking neural networks, with a broader interest in physical computation as well as applications of methods from physics to machine-learning. My current main interests are
+                            Currently I am studying learning algorithms for spiking neural networks, with a broader interest in physical computation as well as applications of methods from physics to machine-learning and vice versa. My main research interests are
                         </p>
                         <ul>
                             <li>Gradient-based learning in Spiking Neural Networks</li>
@@ -39,10 +36,14 @@
                             <li>Optimal Control Theory applied to (Machine) Learning</li>
                         </ul>
                         <p>
-                           One main result I obtained during my PhD, is an event-based analog of the backpropagation  algorithm for spiking neural networks, that computes exact gradients for arbitrary network topologies and a  large class of loss functions, overcoming the commonly held belief that spike discontinuities meant that no exact gradient with respect to parameters could be defined.
+                           One main result I obtained during my PhD, in collaboration with <a class="link dim blue" href="https://timowunderlich.github.io/">Timo Wunderlich</a>, is an <a class="link blue dim" href="https://www.nature.com/articles/s41598-021-91786-z">event-based analog of the backpropagation  algorithm</a> for spiking neural networks, that computes exact gradients for arbitrary network topologies and a  large class of loss functions, overcoming the commonly held belief that spike discontinuities meant that no exact gradient with respect to parameters could be defined.
                         </p>
                         <p>
-                        For more details I refer to a longer <a class="link blue dim" href="research_statement.html">research statement.</a>
+                            In collaboration with <a href="https://www.thphys.uni-heidelberg.de/~wetterich/" class="link blue dim">Christof Wetterich</a> I worked on approximating quantum density matrices by <a class="link blue dim" href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.106.045311">correlations of classical spin systems</a>. To do so we used a novel gradient-based end-to-end optimisation approach to <em>neural sampling</em>, without any assumption on an equilibrium distribution.
+                        </p>
+                        <p>During my Master's thesis supervised by <a class="link blue dim" href="https://www.qu.uni-hamburg.de/cluster/team/weigand.html">Timo Weigand</a> I  proposed a <a class="link blue dim" href="https://arxiv.org/abs/1402.5144">novel method to count massless matter</a> in string theory (F-Theory). My bachelor's thesis supervised by <a class="link blue dim" href="https://www.thphys.uni-heidelberg.de/~hebecker/">Arthur Hebecker</a> was on complex structure deformations and moduli spaces of elliptically fibered Calabi-Yau fourfolds.</p>
+                        <p>
+                        For more details please see my <a class="link blue dim" href="research_statement.html">research statement.</a>
                     </p>
             <p>
             A list of my publications and preprints can be found on <a class="link blue dim" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en">Google Scholar</a>.
@@ -56,27 +57,39 @@
         <h2 class="f3">Projects</h2>
         <article class="measure-wide black-80 serif">
             <h3 class="f4 sans-serif">Norse: ML library for Spiking Neural Networks</h3>
+            <h4 class="f6 sans-serif">2019-today</h4>
             <nav>
             <a class="link gray dim" href="https://github.com/norse/norse">[Github]</a><a class="link gray dim" href="https://norse.github.io/norse/">[Documentation]</a>
             </nav>
             <p class="measure-wide black-80  lh-copy">
-                Norse is a machine learning library I co-created for gradient-based optimization of spiking neural networks using PyTorch. It provides simple point-neuron primitives and abstractions for composing these primitives into networks. Norse was designed to be more accessible and reusable for machine-learning researchers and domain experts compared to previous work, which was often focused on abstractions familiar to computational neuroscientists or tied to a specific publication or model. For example, researchers at the European Space Agency used Norse to train and evaluate a large number of spiking neural networks for satellite image processing. Norse has now been adopted by multiple research labs, and I am continuing to co-develop the library with Jens Pedersen.
+                Norse is a machine learning library I co-created for gradient-based optimization of spiking neural networks using PyTorch. It provides simple point-neuron primitives and abstractions for composing these primitives into networks. Norse was designed to be more accessible and reusable for machine-learning researchers and domain experts compared to previous work, which was often focused on abstractions familiar to computational neuroscientists or tied to a specific publication or model. For example, researchers at the European Space Agency used Norse to train and evaluate a large number of spiking neural networks for satellite image processing. Norse has now been adopted by multiple research labs, and I am continuing to co-develop the library with <a class="link blue dim" href="https://jepedersen.dk">Jens Pedersen</a>.
             </p>
         </article>
         <article class="measure-wide black-80 serif">
             <h3 class="f4 sans-serif">BrainScales-2: Analog Neuromorphic Hardware System</h3>
             <nav>
+                <img src="blog/figures/hicann_x.png"/>
+            </nav>
             <a class="link gray dim" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.795876/full">[Research Article]</a>
             <a class="link gray dim" href="https://electronicvisions.github.io/documentation-brainscales2/latest/">[Demos and Documentation]</a>
             </nav>
+            <h4 class="f6 sans-serif">Hardware Development: 2015-2018</h4>
             <p class="measure-wide black-80  lh-copy">
-            As part of the design team for the BrainScales-2 analog neuromorphic hardware system at Heidelberg University's Electronic Vision(s) group, I worked on digital hardware design and verification, with a focus on the plasticity processing unit - an embedded microprocessor with single-instruction multiple data capabilities that enables programmable plasticity. I also maintained and extended the prototype field-programmable gate array (FPGA) interface, including the spike router and I/O unit. In addition, I was involved in three successful tapeouts of the design using TSMC's 65 nm technology. More recently, I have contributed to the machine learning-related parts of the software stack, including the PyTorch-based API, and led the redesign of our lab course for graduate students interested in working with our neuromorphic hardware system.
+            As part of the design team for the BrainScales-2 analog neuromorphic hardware system at Heidelberg University's Electronic Vision(s) group, I worked on digital hardware design and verification, with a focus on the plasticity processing unit - an embedded microprocessor with single-instruction multiple data capabilities that enables programmable plasticity. I also maintained and extended the prototype field-programmable gate array (FPGA) interface, including the spike router and I/O unit. In addition, I was involved in three successful tapeouts of the design using TSMC's 65 nm technology.
             </p>
+            <h4 class="f6 sans-serif">Software & Experiments: 2018-today</h4>
+
+            <p class="measure-wide black-80  lh-copy"> More recently, I have contributed to the machine learning-related parts of the software stack, including the PyTorch-based API, and led the redesign of our lab course for graduate students interested in working with our neuromorphic hardware system.  I am also working on implementing an event-based gradient estimation algorithm for hardware in-the-loop training, collaborating with Luca Blessing - resulting in a three order of magnitudes more memory efficient gradient estimation algorithm. This is important because previous approaches would not have scaled to larger scale system architectures.
+            </p>
+
         </article>
         <article class="measure-wide black-80 serif">
             <h3 class="f4 sans-serif">Neural Processing Elements</h3>
             <nav>
-                <a class="link gray dim" href="blog/neural_processing_elements-01.html">[Blog Post]</a>
+                <a href="blog/neural_processing_elements-01.html">
+                    <img src="blog/figures/pe_optimisation.png"/>
+                </a>
+            </nav>
             <p class="measure-wide black-80  lh-copy">
                 I have the long term goal to develop a framework based on <em>category theory</em>, which allows for the description of self-optimizing "machines", I call "Neural Processing Elements". Those machines can be composed and nested to form larger machines. I gave a description of this research direction in chapter 2 of my <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/29866/">thesis</a>.
             </p>
@@ -90,6 +103,8 @@
         <p>69120 Heidelberg</p>
         <p><b>Email:</b></p>
         <p><a href="mailto:christian.pehle@kip.uni-heidelberg.de" class="blue link dim">christian.pehle@kip.uni-heidelberg.de</a></p>
+        <p><b>Github:</b></p>
+        <p><a href="https://github.com/cpehle/" class="blue link dim">github.com/cpehle</a></p>
     </section>
   </body>
 </html>
