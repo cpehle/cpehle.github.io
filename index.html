@@ -11,55 +11,46 @@
     <nav class="pa3 pa4-ns">
         <a class="link dim black b f6 f5-ns dib mr3" href="#" title="Home">Christian Pehle</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="/#research" title="Research">Research</a>
-        <a class="link dim gray    f6 f5-ns dib mr3" href="#projects" title="Projects">Projects</a>
+        <a class="link dim gray    f6 f5-ns dib mr3" href="/#projects" title="Projects">Projects</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="/blog/" title="Blog">Blog</a>
 
         <a class="link dim gray    f6 f5-ns dib mr3" href="#" title="CV">CV</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="https://github.com/cpehle" title="Github">Github</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en" title="Publications">Publications</a>
-        <a class="link dim gray    f6 f5-ns dib" href="#contact" title="Contact">Contact</a>
+        <a class="link dim gray    f6 f5-ns dib" href="/#contact" title="Contact">Contact</a>
     </nav>
-    <section class="pa3 pa4-ns sans-serif" id="contact">   
-        <div class="cf measure-wide">
-            <div class="fl w-100 w-40-ns tc bg-black-05">
+    <section class="pa3 pa4-ns sans-serif">   
+        <div class="cf">
+            <div class="fl w-100 w-20-ns">
                 <img src="photos/portrait.png" class="f5 w-100 measure"/>
+                <h4 class="f4 f5-ns w-100">Dr. Christian Pehle</h4>
             </div>
-            <div class="fl f6 w-100 w-60-ns ph4">
-                <p><b>Address:</b></p>
-                <p>Kirchhoff Institute for Physics</p>
-                <p>Heidelberg University</p>
-                <p>Im Neuenheimer Feld 227</p>
-                <p>69120 Heidelberg</p>
-                <p><b>Email:</b></p>
-                <p><a href="mailto:christian.pehle@kip.uni-heidelberg.de" class="blue link dim">christian.pehle@kip.uni-heidelberg.de</a></p>
+            <div class="fl f6 w-100 w-80-ns ph4 serif lh-copy">
+                <p class>
+                    I am a physicist, currently working as a PostDoc as part of the <a href="https://www.structures.uni-heidelberg.de/index.php" class="link blue dim">STRUCTURES Cluster of Excellence</a> at the University of Heidelberg.
+                    </p>
+                        <p class>
+                            I study learning algorithms for spiking neural networks, with a broader interest in physical computation as well as applications of methods from physics to machine-learning. My current main interests are
+                        </p>
+                        <ul>
+                            <li>Gradient-based learning in Spiking Neural Networks</li>
+                            <li>Differentiable Simulation of Neuron Dynamics and other Dynamical Nets</li>
+                            <li>Physical Computation and Learning in Physical Systems</li>
+                            <li>Optimal Control Theory applied to (Machine) Learning</li>
+                        </ul>
+                        <p>
+                           One main result I obtained during my PhD, is an event-based analog of the backpropagation  algorithm for spiking neural networks, that computes exact gradients for arbitrary network topologies and a  large class of loss functions, overcoming the commonly held belief that spike discontinuities meant that no exact gradient with respect to parameters could be defined.
+                        </p>
+                        <p>
+                        For more details I refer to a longer <a class="link blue dim" href="research_statement.html">research statement.</a>
+                    </p>
+            <p>
+            A list of my publications and preprints can be found on <a class="link blue dim" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en">Google Scholar</a>.
+            </p>
             </div>
         </div>   
     </section>
     <section>
-        <p class="measure-wide serif ph3 ph4-ns lh-copy">
-        I am a physicist, currently working as a PostDoc as part of the <a href="https://www.structures.uni-heidelberg.de/index.php" class="link blue dim">STRUCTURES Cluster of Excellence</a> at the University of Heidelberg. <em>I am currently looking for a research position either in industry or academia (PostDoc or tenure track), so feel free to reach with any such opportunities</em>
-        </p>
-
-    </section>
-    <section class="ph3 ph4-ns sans-serif" id="research">     
-        <article class="measure-wide black-80 serif lh-copy">
-            <h2 class="f3 sans-serif">Research Interests</h2>
-            <p class="measure-wide">
-                I study learning algorithms for spiking neural networks, with a broader interest in physical computation as well as applications of methods from physics to machine-learning. My current main interests are
-            </p>
-            <ul>
-                <li>Gradient-based learning in Spiking Neural Networks</li>
-                <li>Differentiable Simulation of Neuron Dynamics</li>
-                <li>Physical Computation and Learning in Physical Systems</li>
-                <li>Optimal Control Theory applied to (Machine) Learning</li>
-            </ul>
-            <p>
-            For more details I refer to a longer <a class="link blue dim" href="research_statement.html">research statement.</a>
-        </p>
-<p>
-A list of my publications and preprints can be found on <a class="link blue dim" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en">Google Scholar</a>.
-</p>
-        </article>
     </section>
     <section class="pa3 pa4-ns bg-black-10" id="projects">
         <h2 class="f3">Projects</h2>
@@ -87,9 +78,18 @@ A list of my publications and preprints can be found on <a class="link blue dim"
             <nav>
                 <a class="link gray dim" href="blog/neural_processing_elements-01.html">[Blog Post]</a>
             <p class="measure-wide black-80  lh-copy">
-                I work on a framework based on <em>category theory</em>, which allows for the description of self-optimizing "machines", which I call "Neural Processing Elements". Those machines can be composed and nested to form larger machines. I gave a description of this research direction in chapter 2 of my <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/29866/">thesis</a>.
+                I have the long term goal to develop a framework based on <em>category theory</em>, which allows for the description of self-optimizing "machines", I call "Neural Processing Elements". Those machines can be composed and nested to form larger machines. I gave a description of this research direction in chapter 2 of my <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/29866/">thesis</a>.
             </p>
         </article>
+    </section>
+    <section class="pa3 pa4-ns" id="contact">
+        <p><b>Address:</b></p>
+        <p>Kirchhoff Institute for Physics</p>
+        <p>Heidelberg University</p>
+        <p>Im Neuenheimer Feld 227</p>
+        <p>69120 Heidelberg</p>
+        <p><b>Email:</b></p>
+        <p><a href="mailto:christian.pehle@kip.uni-heidelberg.de" class="blue link dim">christian.pehle@kip.uni-heidelberg.de</a></p>
     </section>
   </body>
 </html>
