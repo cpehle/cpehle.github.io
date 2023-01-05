@@ -1,1 +1,80 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <title>
+  Dr. rer. nat. Christian Pehle
+  </title>
+  <meta name="author" content="Christian Pehle">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  <body class="sans-serif">
+    <nav class="pa3 pa4-ns">
+        <a class="link dim black b f6 f5-ns dib mr3" href="#" title="Home">Christian Pehle</a>
+        <a class="link dim gray    f6 f5-ns dib mr3" href="#research" title="Research">Research</a>
+        <a class="link dim gray    f6 f5-ns dib mr3" href="#projects" title="Projects">Projects</a>
+        <a class="link dim gray    f6 f5-ns dib mr3" href="#" title="CV">CV</a>
+        <a class="link dim gray    f6 f5-ns dib mr3" href="https://github.com/cpehle" title="Github">Github</a>
+        <a class="link dim gray    f6 f5-ns dib mr3" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en" title="Publications">Publications</a>
+        <a class="link dim gray    f6 f5-ns dib" href="#" title="Contact">Contact</a>
+    </nav>
+    <section class="pa3 pa4-ns sans-serif">   
+        <div class="cf measure-wide">
+            <div class="fl w-100 w-40-ns tc bg-black-05">
+                <img src="photos/portrait.png" class="f5 w-100 measure"/>
+            </div>
+            <div class="fl f6 w-100 w-60-ns ph4">
+                <p><b>Address:</b></p>
+                <p>Kirchhoff Institute for Physics</p>
+                <p>Heidelberg University</p>
+                <p>Im Neuenheimer Feld 227</p>
+                <p>69120 Heidelberg</p>
+                <p><b>Email:</b></p>
+                <p><a href="mailto:christian.pehle@kip.uni-heidelberg.de" class="blue link dim">christian.pehle@kip.uni-heidelberg.de</a></p>
+            </div>
+        </div>   
+    </section>
+    <section class="pa3 pa4-ns sans-serif" id="research">     
+        <article class="measure-wide black-80 serif lh-copy">
+            <h2 class="f3 sans-serif">Research Interests</h2>
+
+            <p>
+            As a PostDoc at the Kirchhoff Institute for Physics at Heidelberg University, my research interests lie in the areas of machine learning, computational neuroscience, neuromorphic computing, and theoretical physics, with a current focus on "NeuroAI" and physical computation. Specifically, I am interested in understanding the physical principles behind "self-optimization" or "learning" in physical systems, particularly in networks of biological neurons. To this end, I am developing software tools for differentiable simulation of interacting physical systems and investigating the theoretical foundations of learning algorithms for these systems using methods from optimal control theory and physics. One goal is to discover "biologically plausible" learning dynamics and network architectures that can be efficiently implemented and achieve competitive performance compared to current deep learning architectures, with the aim of contributing to the development of general artificial intelligence.
+            </p>
+            <p>
+During my PhD, I worked on learning algorithms for spiking neural networks, collaborating with Timo Wunderlich to derive the EventProp algorithm - an event-based method for computing exact gradients in networks of spiking neurons, similar to the backpropagation algorithm for artificial neural networks. No such general algorithm was previously known. Besides its theoretically appealing properties it also lends itself to an efficient implementation in event-based software simulators and digital neuromorphic hardware, since both the forward propagation and gradient computation are event-based. This results in order of magnitudes improvement in memory efficiency and runtime performance compared to other approaches. The derivation was based on the adjoint sensitivity method for hybrid dynamical systems from the optimal control theory literature. I am currently exploring both applications of this work to hardware-in-the-loop learning for analog neuromorphic hardware, as well as extensions to a more general class of dynamical systems coupled by events. 
+</p>
+<p>
+A list of my publications and preprints can be found on <a class="link blue dim" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en">Google Scholar</a>.
+</p>
+        </article>
+    </section>
+    <section class="pa3 pa4-ns bg-black-10" id="projects">
+        <h2 class="f3">Projects</h2>
+        <article class="measure-wide black-80 serif">
+            <h3 class="f4 sans-serif">Norse: ML library for Spiking Neural Networks</h3>
+            <nav>
+            <a class="link gray dim" href="https://github.com/norse/norse">[Github]</a><a class="link gray dim" href="https://norse.github.io/norse/">[Documentation]</a>
+            </nav>
+            <p class="measure-wide black-80  lh-copy">
+                Norse is a machine learning library I developed for gradient-based optimization of spiking neural networks using PyTorch. It provides simple point-neuron primitives and abstractions for composing these primitives into networks. Norse was designed to be more accessible and reusable for machine-learning researchers and domain experts compared to previous work, which was often focused on abstractions familiar to computational neuroscientists or tied to a specific publication or model. For example, researchers at the European Space Agency used Norse to train and evaluate a large number of spiking neural networks for satellite image processing. Norse has now been adopted by multiple research labs, and I am continuing to co-develop the library with Jens Pedersen.
+            </p>
+        </article>
+        <article class="measure-wide black-80 serif">
+            <h3 class="f4 sans-serif">BrainScales-2: Analog Neuromorphic Hardware System</h3>
+            <nav>
+            <a class="link gray dim" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.795876/full">[Research Article]</a>
+            <a class="link gray dim" href="https://electronicvisions.github.io/documentation-brainscales2/latest/">[Demos and Documentation]</a>
+            </nav>
+            <p class="measure-wide black-80  lh-copy">
+            As part of the design team for the BrainScales-2 analog neuromorphic hardware system at Heidelberg University's Electronic Vision(s) group, I worked on digital hardware design and verification, with a focus on the plasticity processing unit - an embedded microprocessor with single-instruction multiple data capabilities that enables programmable plasticity. I also maintained and extended the prototype field-programmable gate array (FPGA) interface, including the spike router and I/O unit. In addition, I was involved in three successful tapeouts of the design using TSMC's 65 nm technology. More recently, I have contributed to the machine learning-related parts of the software stack, including the PyTorch-based API, and led the redesign of our lab course for graduate students interested in working with our neuromorphic hardware system.
+            </p>
+        </article>
+        <article class="measure-wide black-80 serif">
+            <h3 class="f4 sans-serif">Neural Processing Elements</h3>
+            <p class="measure-wide black-80  lh-copy">
+                I work on a framework based on <em>category theory</em>, which allows for the description of self-optimizing "machines", which I call "Neural Processing Elements". Those machines can be composed and nested to form larger machines. I gave a description of this research direction in chapter 2 of my <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/29866/">thesis</a>.
+            </p>
+        </article>
+    </section>
+  </body>
+</html>
