@@ -12,15 +12,14 @@
         <a class="link dim black b f6 f5-ns dib mr3" href="#" title="Home">About</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="/#projects" title="Projects">Projects</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="/blog/" title="Blog">Blog</a>
-
-        <a class="link dim gray    f6 f5-ns dib mr3" href="#" title="CV">CV</a>
         <a class="link dim gray    f6 f5-ns dib" href="/#contact" title="Contact">Contact</a>
     </nav>
     <section class="pa3 pa4-ns sans-serif">   
         <div class="cf">
             <div class="fl w-100 w-20-ns">
                 <img src="photos/portrait.png" class="f5 w-100 measure"/>
-                <h4 class="f3 f4-ns w-100 fw2">Dr. Christian Pehle</h4>
+                <h4 class="f3 f4-ns w-100 fw2">Dr. Christian Pehle </h4>
+                <span><a class="f3 f4-ns link blue dim" href="#">Short CV  (pdf)</a> ‧ <a class="f3 f4-ns link blue dim" href="#">CV (pdf)</a> </span>
             </div>
             <div class="fl f6 w-100 w-80-ns ph4 serif lh-copy">
                 <p class>
@@ -39,11 +38,11 @@
                            One main result I obtained during my PhD, in collaboration with <a class="link dim blue" href="https://timowunderlich.github.io/">Timo Wunderlich</a>, is an <a class="link blue dim" href="https://www.nature.com/articles/s41598-021-91786-z">event-based analog of the backpropagation  algorithm</a> for spiking neural networks, that computes exact gradients for arbitrary network topologies and a  large class of loss functions, overcoming the commonly held belief that spike discontinuities meant that no exact gradient with respect to parameters could be defined.
                         </p>
                         <p>
-                            In collaboration with <a href="https://www.thphys.uni-heidelberg.de/~wetterich/" class="link blue dim">Christof Wetterich</a> I worked on approximating quantum density matrices by <a class="link blue dim" href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.106.045311">correlations of classical spin systems</a>. To do so we used a novel gradient-based end-to-end optimisation approach to <em>neural sampling</em>, without any assumption on an equilibrium distribution.
+                            In collaboration with <a href="https://www.thphys.uni-heidelberg.de/~wetterich/" class="link blue dim">Christof Wetterich</a> I worked on approximating quantum density matrices by <a class="link blue dim" href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.106.045311">correlations in classical spin systems</a>. To do so we used a novel gradient-based end-to-end optimisation approach to <em>neural sampling</em> with networks of spiking neurons, without any assumption on an equilibrium distribution.
                         </p>
                         <p>During my Master's thesis supervised by <a class="link blue dim" href="https://www.qu.uni-hamburg.de/cluster/team/weigand.html">Timo Weigand</a> I  proposed a <a class="link blue dim" href="https://arxiv.org/abs/1402.5144">novel method to count massless matter</a> in string theory (F-Theory). My bachelor's thesis supervised by <a class="link blue dim" href="https://www.thphys.uni-heidelberg.de/~hebecker/">Arthur Hebecker</a> was on complex structure deformations and moduli spaces of elliptically fibered Calabi-Yau fourfolds.</p>
                         <p>
-                        For more details please see my <a class="link blue dim" href="research_statement.html">research statement.</a>
+                        For more details see my <a class="link blue dim" href="research_statement.html">research statement.</a>
                     </p>
             <p>
             A list of my publications and preprints can be found on <a class="link blue dim" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en">Google Scholar</a>.
@@ -59,7 +58,7 @@
             <h3 class="f4 sans-serif">Norse: ML library for Spiking Neural Networks</h3>
             <h4 class="f6 sans-serif">2019-today</h4>
             <nav>
-            <a class="link gray dim" href="https://github.com/norse/norse">[Github]</a><a class="link gray dim" href="https://norse.github.io/norse/">[Documentation]</a>
+            <a class="link blue dim" href="https://github.com/norse/norse">[Github]</a><a class="link blue dim" href="https://norse.github.io/norse/">[Documentation]</a>
             </nav>
             <p class="measure-wide black-80  lh-copy">
                 Norse is a machine learning library I co-created for gradient-based optimization of spiking neural networks using PyTorch. It provides simple point-neuron primitives and abstractions for composing these primitives into networks. Norse was designed to be more accessible and reusable for machine-learning researchers and domain experts compared to previous work, which was often focused on abstractions familiar to computational neuroscientists or tied to a specific publication or model. For example, researchers at the European Space Agency used Norse to train and evaluate a large number of spiking neural networks for satellite image processing. Norse has now been adopted by multiple research labs, and I am continuing to co-develop the library with <a class="link blue dim" href="https://jepedersen.dk">Jens Pedersen</a>.
@@ -70,16 +69,19 @@
             <nav>
                 <img src="blog/figures/hicann_x.png"/>
             </nav>
-            <a class="link gray dim" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.795876/full">[Research Article]</a>
-            <a class="link gray dim" href="https://electronicvisions.github.io/documentation-brainscales2/latest/">[Demos and Documentation]</a>
+            <a class="link blue dim" href="https://www.frontiersin.org/articles/10.3389/fnins.2022.795876/full">[Research Article]</a>
+            <a class="link blue dim" href="https://electronicvisions.github.io/documentation-brainscales2/latest/">[Demos and Documentation]</a>
             </nav>
             <h4 class="f6 sans-serif">Hardware Development: 2015-2018</h4>
             <p class="measure-wide black-80  lh-copy">
-            As part of the design team for the BrainScales-2 analog neuromorphic hardware system at Heidelberg University's Electronic Vision(s) group, I worked on digital hardware design and verification, with a focus on the plasticity processing unit - an embedded microprocessor with single-instruction multiple data capabilities that enables programmable plasticity. I also maintained and extended the prototype field-programmable gate array (FPGA) interface, including the spike router and I/O unit. In addition, I was involved in three successful tapeouts of the design using TSMC's 65 nm technology.
+            As part of the design team for the BrainScales-2 analog neuromorphic hardware system at Heidelberg University's Electronic Vision(s) group, I worked on digital hardware design and verification, with a focus on the plasticity processing unit - an embedded microprocessor with single-instruction multiple data capabilities that enables programmable plasticity. I also maintained and extended the prototype field-programmable gate array (FPGA) interface, including the spike router and I/O unit. The latter enabled most of the experiments performed with the prototype systems. My extensions to the plasticity processing unit were key to enable both hardware-in-the-loop gradient-based learning and on-chip automatic calibration of analog hardware parameters, crucial to ensure scalability. In total, I was involved in three successful tapeouts (2 prototypes and 1 full-scale system) of the design using TSMC's 65 nm technology.
             </p>
             <h4 class="f6 sans-serif">Software & Experiments: 2018-today</h4>
 
-            <p class="measure-wide black-80  lh-copy"> More recently, I have contributed to the machine learning-related parts of the software stack, including the PyTorch-based API, and led the redesign of our lab course for graduate students interested in working with our neuromorphic hardware system.  I am also working on implementing an event-based gradient estimation algorithm for hardware in-the-loop training, collaborating with Luca Blessing - resulting in a three order of magnitudes more memory efficient gradient estimation algorithm. This is important because previous approaches would not have scaled to larger scale system architectures.
+            <p class="measure-wide black-80  lh-copy"> More recently, I have contributed to the machine learning-related parts of the software stack, including the PyTorch-based API, and led the redesign of our lab course for graduate students interested in working with our neuromorphic hardware system. 
+            </p>
+            <p class="measure-wide black-80  lh-copy">
+                I am also working on implementing an <a class="link blue dim" href="http://www.kip.uni-heidelberg.de/Veroeffentlichungen/download.php/6802/temp/4507.pdf">event-based gradient estimation algorithm (pdf)</a> for hardware in-the-loop training, collaborating with Luca Blessing - resulting in a three orders of magnitude more information efficient gradient estimation. This is important because previous approaches would not have scaled to larger scale system architectures.
             </p>
 
         </article>
