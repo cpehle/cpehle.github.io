@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+  <meta name="description" content="$description-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <style>
+    .csl-left-margin {
+      float: left
+    }
+    .csl-right-inline {
+      padding-left: 0.5em;
+      float: left
+    }
+    .csl-entry {
+      display: flex;
+    }
+    .references {
+      font-size: 10px;
+    }
+  </style>
+<!--  
+  <style>
+    $styles.html()$
+  </style>
+
+$for(css)$
+  <link rel="stylesheet" href="$css$" />
+$endfor$
+-->
+$for(header-includes)$
+  $header-includes$
+$endfor$
+$if(math)$
+  $math$
+$endif$
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+</head>
+<body>
+<nav class="pa3 pa4-ns sans-serif">
+    <a class="link dim black b f6 f5-ns dib mr3" href="/" title="Home">Christian Pehle</a>
+    <a class="link dim gray    f6 f5-ns dib mr3" href="/#research" title="Research">Research</a>
+    <a class="link dim gray    f6 f5-ns dib mr3" href="/#projects" title="Projects">Projects</a>
+    <a class="link dim gray b  f6 f5-ns dib mr3" href="/blog/" title="Blog">Blog</a>
+    <a class="link dim gray    f6 f5-ns dib mr3" href="#" title="CV">CV</a>
+    <a class="link dim gray    f6 f5-ns dib mr3" href="https://github.com/cpehle" title="Github">Github</a>
+    <a class="link dim gray    f6 f5-ns dib mr3" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en" title="Publications">Publications</a>
+    <a class="link dim gray    f6 f5-ns dib" href="/#contact" title="Contact">Contact</a>
+</nav>
+$for(include-before)$
+$include-before$
+$endfor$
+<article class="pa3 pa4-ns measure-wide black-80 serif lh-copy">
+$if(title)$
+<header id="title-block-header">
+<h1 class="f2 sans-serif">$title$</h1>
+$endif$
+$if(subtitle)$
+<p class="subtitle">$subtitle$</p>
+$endif$
+$if(date)$
+<p class="sans-serif date gray">$date$</p>
+$endif$
+$if(abstract)$
+<div class="abstract">
+<div class="abstract-title">$abstract-title$</div>
+$abstract$
+</div>
+$endif$
+</header>
+$if(toc)$
+<nav id="$idprefix$TOC" role="doc-toc">
+$if(toc-title)$
+<h2 id="$idprefix$toc-title">$toc-title$</h2>
+$endif$
+$table-of-contents$
+</nav>
+$endif$
+$body$
+</article>
+$for(include-after)$
+$include-after$
+$endfor$
+</body>
+</html>

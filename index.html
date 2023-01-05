@@ -10,8 +10,10 @@
   <body class="sans-serif">
     <nav class="pa3 pa4-ns">
         <a class="link dim black b f6 f5-ns dib mr3" href="#" title="Home">Christian Pehle</a>
-        <a class="link dim gray    f6 f5-ns dib mr3" href="#research" title="Research">Research</a>
+        <a class="link dim gray    f6 f5-ns dib mr3" href="/#research" title="Research">Research</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="#projects" title="Projects">Projects</a>
+        <a class="link dim gray    f6 f5-ns dib mr3" href="/blog/" title="Blog">Blog</a>
+
         <a class="link dim gray    f6 f5-ns dib mr3" href="#" title="CV">CV</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="https://github.com/cpehle" title="Github">Github</a>
         <a class="link dim gray    f6 f5-ns dib mr3" href="https://scholar.google.com/citations?user=FzRMI38AAAAJ&hl=en" title="Publications">Publications</a>
@@ -46,7 +48,7 @@
             <h2 class="f3 sans-serif">Research Interests</h2>
 
             <p>
-            As a PostDoc at the Kirchhoff Institute for Physics at Heidelberg University, my research interests lie in the areas of machine learning, computational neuroscience, neuromorphic computing, and theoretical physics, with a current focus on "NeuroAI" and physical computation. Specifically, I am interested in understanding the physical principles behind "self-optimization" or "learning" in physical systems, particularly in networks of biological neurons. To this end, I am developing software tools for differentiable simulation of interacting physical systems and investigating the theoretical foundations of learning algorithms for these systems using methods from optimal control theory and physics. One goal is to discover "biologically plausible" learning dynamics and network architectures that can be efficiently implemented and achieve competitive performance compared to current deep learning architectures, with the aim of contributing to the development of general artificial intelligence.
+            As a PostDoc at the Kirchhoff Institute for Physics at Heidelberg University, my research interests lie in the areas of machine learning, computational neuroscience, neuromorphic computing, and theoretical physics, with a current focus on "NeuroAI" and physical computation. Specifically, I am interested in understanding the physical principles behind "self-optimization" or "learning" in physical systems, particularly in networks of biological neurons. To this end, I am developing software tools for differentiable simulation of interacting physical systems and investigating the theoretical foundations of learning algorithms for these systems using methods from optimal control theory and physics. The ultimate goal is to discover "biologically plausible" learning dynamics and network architectures that can be efficiently implemented and achieve competitive performance compared to current deep learning architectures, with the aim of contributing to the development of general artificial intelligence.
             </p>
             <p>
 During my PhD, I worked on learning algorithms for spiking neural networks, collaborating with Timo Wunderlich to derive the EventProp algorithm - an event-based method for computing exact gradients in networks of spiking neurons, similar to the backpropagation algorithm for artificial neural networks. No such general algorithm was previously known. Besides its theoretically appealing properties it also lends itself to an efficient implementation in event-based software simulators and digital neuromorphic hardware, since both the forward propagation and gradient computation are event-based. This results in order of magnitudes improvement in memory efficiency and runtime performance compared to other approaches. The derivation was based on the adjoint sensitivity method for hybrid dynamical systems from the optimal control theory literature. I am currently exploring both applications of this work to hardware-in-the-loop learning for analog neuromorphic hardware, as well as extensions to a more general class of dynamical systems coupled by events. 

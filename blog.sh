@@ -1,0 +1,1 @@
+pandoc -s --to=html5 --template=template/template.html --katex --filter=pandoc-crossref --citeproc --bibliography bibliography.bib --number-sections source/neural_processing_elements-01.md -o blog/neural_processing_elements-01.html
