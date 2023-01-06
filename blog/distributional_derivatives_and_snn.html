@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Distributional Derivatives and Spiking Neural Networks</title>
+  <style>
+    .csl-left-margin {
+      float: left
+    }
+    .csl-right-inline {
+      padding-left: 0.5em;
+      float: left
+    }
+    .csl-entry {
+      display: flex;
+    }
+    .references {
+      font-size: 10px;
+    }
+  </style>
+<!--  
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+
+-->
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+</head>
+<body>
+<nav class="pa3 pa4-ns sans-serif">
+    <a class="link dim black b f6 f5-ns dib mr3" href="/" title="Home">About</a>
+    <a class="link dim gray    f6 f5-ns dib mr3" href="/#research" title="Research">Research</a>
+    <a class="link dim gray    f6 f5-ns dib mr3" href="/#projects" title="Projects">Projects</a>
+    <a class="link dim gray b  f6 f5-ns dib mr3" href="/blog/" title="Blog">Blog</a>
+    <a class="link dim gray    f6 f5-ns dib mr3" href="#" title="CV">CV</a>
+    <a class="link dim gray    f6 f5-ns dib" href="/#contact" title="Contact">Contact</a>
+</nav>
+<article class="pa3 pa4-ns black-80 serif lh-copy">
+<header id="title-block-header">
+<h1 class="f2 sans-serif">Distributional Derivatives and Spiking Neural
+Networks</h1>
+</header>
+<section class="measure-wide">
+<p>Spiking neural networks exchange “spikes” in order to perform
+computations. Spikes occur at certain points in time and can be
+physically interpreted as an abstraction of a physical process that
+occurs much faster than the dynamics under consideration. To model
+sequences of spikes sums of delta distributions are commonly used: <span
+class="math display">
+s(t) = \sum_i \delta(t - t_i)
+</span> Physicists routinely abuse notation and treat distributions as
+if they were ordinary functions, we will do so in this exposition for
+the most part as well, with the understanding that with some more effort
+the arguments presented here could be made rigorous.</p>
+<p>To define the derivative of a distribution one uses a trick perfected
+by mathematicians: Simply define what you want to be true, to be the
+definition. There is a pairing between distributions and smooth
+compactly supported functions, which physicists simply write as the
+integral <span class="math display">
+\langle \eta, f \rangle = \int_{-\infty}^{\infty}  \eta f \mathrm{dt}
+</span> the derivative <span class="math inline">\eta&#39;</span> of a
+distribution is defined as <span class="math display">
+\langle \eta&#39;, f \rangle = -\langle \eta, f&#39; \rangle =
+-\int_{-\infty}^{\infty}  \eta f&#39; \mathrm{dt}
+</span></p>
+<p>We can then use any sequence of functions, which is at least once
+differentiable almost everywhere as an approximation. As a simple
+example consider the sequence of triangle function <span
+class="math inline">\Lambda_\epsilon</span> <span class="math display">
+\delta(t) = \lim_{\epsilon \to 0} \frac{1}{\epsilon}
+\Lambda(t/\epsilon).
+</span> Its derivative is given by <span class="math display">
+\Lambda&#39;_\epsilon = \dfrac{\Pi\left(\frac{t}{\epsilon}
++\frac{\epsilon}{2}\right)-\Pi\left(\frac{t}{\epsilon}
+-\frac{\epsilon}{2}\right)}{\epsilon^2}.
+</span> Now the second identity to keep in mind is that if <span
+class="math inline">g(t)</span> is a differentiable function of <span
+class="math inline">t</span>, then <span class="math display">
+\delta(g(t)) = \sum_{i} \frac{1}{\lvert g&#39;(t) \rvert}\delta(t - t_i)
+</span> and therefore <span class="math display">
+\delta(g(t)) \lvert g&#39;(t) \rvert = \sum_{i} \delta(t - t_i)
+</span></p>
+<p>If we now consider <span class="math inline">N</span> neurons and
+dynamical equations</p>
+<p><span class="math display">
+\begin{align}
+\dot{V} &amp;= f(V,I) \\
+0       &amp;= I - W_r s \\
+\tau_s \dot{s}_k &amp;= -s_k+ \delta(v_k - v_\mathrm{th}) \lvert
+\dot{v}_k(t) \rvert
+\end{align}
+</span></p>
+<p>Consider a loss <span class="math display">
+L = \int_0^T l(V,I,s,p) \mathrm{dt}
+</span> and <span class="math display">
+\mathcal{L} = L + \langle \lambda_V, \dot{V} - f(V,I)
+\rangle + \langle \lambda_I, I - W_r s\rangle + \langle \lambda_s, -s +
+\delta(v - v_\mathrm{th}) \lvert \dot{v}_k(t) \rvert \rangle
+</span></p>
+</section>
+</article>
+</body>
+</html>
