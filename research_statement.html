@@ -1,29 +1,484 @@
 <!DOCTYPE html>
-<html lang="en">
-  <title>
-    Research Statement
-  </title>
-  <meta name="author" content="Christian Pehle">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-  <body class="sans-serif">
-    <nav class="pa3 pa4-ns">
-        <a class="link dim black   f6 f5-ns dib mr3" href="/" title="Home">About</a>
-        <a class="link dim gray    f6 f5-ns dib mr3" href="/#projects" title="Projects">Projects</a>
-        <a class="link dim gray    f6 f5-ns dib" href="/#contact" title="Contact">Contact</a>
-    </nav>
-    <section class="ph3 ph4-ns sans-serif" id="research">     
-        <article class="measure-wide black-80 serif lh-copy">
-            <h2 class="f2 sans-serif">Research Statement</h2>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Research Statement</title>
+  <style>
+    .csl-left-margin {
+      float: left
+    }
+    .csl-right-inline {
+      padding-left: 0.5em;
+      float: left
+    }
+    .csl-entry {
+      display: flex;
+    }
+    .references {
+      font-size: 10px;
+    }
+  </style>
+<!--  
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
 
-<p>
-My research interests lie at the intersection of machine learning, computational neuroscience, neuromorphic computing, and theoretical physics (typically not all of those intersect at the same time), with a current focus on physical computation. Specifically, I am interested in understanding the physical principles behind "self-optimization" or "learning" in physical systems, particularly in networks of biological neurons. To this end, I am developing software tools for differentiable simulation of interacting physical systems and investigating the theoretical foundations of learning algorithms for these systems using methods from optimal control theory and physics. The ultimate goal is to discover "biologically plausible" learning dynamics and network architectures that can be efficiently implemented and achieve competitive performance compared to current deep learning architectures, with the aim of contributing to the development of general artificial intelligence.
-</p>
-<p>
-During my PhD, I worked on learning algorithms for spiking neural networks, collaborating with Timo Wunderlich to derive the EventProp algorithm - an event-based method for computing exact gradients in networks of spiking neurons, similar to the backpropagation algorithm for artificial neural networks. No such general algorithm was previously known. Besides its theoretically appealing properties it also lends itself to an efficient implementation in event-based software simulators and digital neuromorphic hardware, since both the forward propagation and gradient computation are event-based. This results in order of magnitudes improvement in memory efficiency and runtime performance compared to other approaches. The derivation was based on the adjoint sensitivity method for hybrid dynamical systems from the optimal control theory literature. I am currently exploring both applications of this work to hardware-in-the-loop learning for analog neuromorphic hardware, as well as extensions to a more general class of dynamical systems coupled by events. 
-</p>
-</article>
+-->
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+</head>
+<body>
+<nav class="pa3 pa4-ns sans-serif">
+    <a class="link dim black b f6 f5-ns dib mr3" href="/" title="Home">About</a>
+    <a class="link dim gray    f6 f5-ns dib mr3" href="/#projects" title="Projects">Projects</a>
+    <a class="link dim gray    f6 f5-ns dib" href="/#contact" title="Contact">Contact</a>
+</nav>
+<article class="pa3 pa4-ns black-80 serif lh-copy">
+<header id="title-block-header">
+<h1 class="f2 sans-serif">Research Statement</h1>
+</header>
+<section class="measure-wide">
+<h2 class="unnumbered" id="overview">Overview</h2>
+<p>My research has focussed on Machine Learning in the context of
+Brain-Inspired or Neuromorphic Computing, where I have made hardware
+<span class="citation"
+data-cites="pehle2022brainscales schreiber2020closed aamir2018accelerated"> [<a
+href="#ref-pehle2022brainscales" role="doc-biblioref">1</a>–<a
+href="#ref-aamir2018accelerated" role="doc-biblioref">3</a>]</span>,
+software <span class="citation" data-cites="norse2021"> [<a
+href="#ref-norse2021" role="doc-biblioref">4</a>]</span>, algorithmic
+<span class="citation" data-cites="wunderlich2021event"> [<a
+href="#ref-wunderlich2021event" role="doc-biblioref">5</a>]</span>, as
+well as conceptual contributions <span class="citation"
+data-cites="wunderlich2021event bohnstingl2019neuromorphic pehle2020neuromorphic"> [<a
+href="#ref-wunderlich2021event" role="doc-biblioref">5</a>–<a
+href="#ref-pehle2020neuromorphic"
+role="doc-biblioref">7</a>]</span>.</p>
+<h2 class="unnumbered" id="event-based-backpropagation">Event-based
+backpropagation</h2>
+<p>I have derived, in collaboration with Timo Wunderlich, the analogue
+of the backpropagation algorithm for continuous time spiking neural
+networks <span class="citation" data-cites="wunderlich2021event"> [<a
+href="#ref-wunderlich2021event" role="doc-biblioref">5</a>]</span> –
+EventProp. It computes exact parameter gradients in networks of spiking
+neurons with no restrictions on network topology or loss function.
+Previous work had either found solutions for particular cases or
+considered finding exact parameter gradients impossible due to the
+discontinuous nature of spike transitions. Notably, the algorithm can be
+efficiently implemented using an event-based simulation algorithm and on
+digital neuromorphic hardware, requiring only temporally sparse
+communication during the backward phase. Furthermore, the memory
+requirements are proportional to the number of communicated spikes
+resulting in order of magnitude improvement relative to previous
+approaches. These properties also strongly suggest an energy-efficient
+implementation in next-generation analog neuromorphic hardware is
+possible.</p>
+<p>In ongoing work, we have demonstrated that the algorithm can estimate
+parameter gradients by observing only spikes from an analog Neuromorphic
+Hardware emulating a known spiking neural network <span class="citation"
+data-cites="pehle2022eventbased"> [<a href="#ref-pehle2022eventbased"
+role="doc-biblioref">8</a>]</span>. We match a previous approach <span
+class="citation" data-cites="cramer2022surrogate"> [<a
+href="#ref-cramer2022surrogate" role="doc-biblioref">9</a>]</span> in
+performance (on tasks we have evaluated so far) while not requiring
+densely sampled membrane-voltage traces. Such dense observation of the
+system state is far less information efficient and would be prohibitive
+for large-scale systems.</p>
+<p>While EventProp cannot be considered biologically plausible, I
+believe it to be one key enabling “technology” for NeuroAI <span
+class="citation" data-cites="zador2022toward"> [<a
+href="#ref-zador2022toward" role="doc-biblioref">10</a>]</span> –
+analogous to how the backpropagation algorithm was foundational to the
+current rapid progress in Machine Learning – once it is combined with
+further insights from neuroscience, such as connectivity and neuron
+dynamics, as well as the large scale electro-physiological and
+connectivity data.</p>
+<p>There also exists an analog of real-time recurrent learning (RTRL)
+<span class="citation" data-cites="williams1989experimental"> [<a
+href="#ref-williams1989experimental" role="doc-biblioref">11</a>]</span>
+for spiking neural networks and corresponding approximate truncations,
+which I derived in my thesis <span class="citation"
+data-cites="pehle2021adjoint"> [<a href="#ref-pehle2021adjoint"
+role="doc-biblioref">12</a>]</span>, but have yet to evaluate
+experimentally.</p>
+<h2 class="unnumbered"
+id="correlations-in-spiking-neural-networks">Correlations in Spiking
+Neural Networks</h2>
+<p>I’ve investigated, in collaboration with Christof Wetterich, how
+correlations – fundamental both to quantum mechanics and potentially
+computation in biological systems – can be learned in networks of
+spiking neurons <span class="citation"
+data-cites="pehle2020neuromorphic"> [<a
+href="#ref-pehle2020neuromorphic" role="doc-biblioref">7</a>]</span>.
+One main contribution of this work was a first demonstration that
+correlations can approximate specific low-dimensional quantum density
+matrices in networks of spiking neurons. Another contribution is the
+demonstration that it is possible to implement neural sampling using an
+end-to-end learning approach without any prior assumptions on the
+underlying equilibrium probability distribution. Further research in
+this direction could yield a practical way to approximate a restricted
+set of density matrices, for example, ground states of particular
+quantum spin systems, or to perform quantum state tomography. It also
+could inform theoretical tools for studying correlations in spiking
+neural networks.</p>
+<h2 class="unnumbered"
+id="hardware-design-and-plasticity-experiments">Hardware Design and
+Plasticity Experiments</h2>
+<p>I was part of the design team of an analog Neuromorphic Processor
+<span class="citation" data-cites="pehle2022brainscales"> [<a
+href="#ref-pehle2022brainscales" role="doc-biblioref">1</a>]</span> –
+BrainScaleS-2. In particular, I was responsible for the scaling up and
+verification of the “plasticity processing unit” (an embedded processor
+with a single-instruction-multiple data unit and parallel access to
+analog system observables). The purpose of this processor is to enable
+“hybrid plasticity,” that is, the flexible implementation of
+bio-inspired learning rules that can directly interact with the analog
+emulation of neuron dynamics <span class="citation"
+data-cites="friedmann2016demonstrating"> [<a
+href="#ref-friedmann2016demonstrating"
+role="doc-biblioref">13</a>]</span>. Since the analog components have
+time constants that are approximately <span
+class="math inline">10^3</span> faster than the time constants of
+biological neuron voltage dynamics, it enables the rapid evaluation of
+plasticity rules over long biological timescales, as well as the use of
+evolutionary algorithms. I evaluated and designed plasticity experiments
+and extended the digital implementation based on user requirements. I
+interacted with both computational and experimental neuroscientists to
+determine which current computational approaches to bio-plausible
+learning and plasticity could be realized. My main contributions were:
+To suggest the implementation of meta-plasticity (implemented by
+executing a small ANN on the plasticity processing unit, whose weights
+were optimized using evolutionary strategies) and contributing to a
+demonstration of Learning-to-Learn on Neuromorphic Hardware <span
+class="citation" data-cites="bohnstingl2019neuromorphic"> [<a
+href="#ref-bohnstingl2019neuromorphic"
+role="doc-biblioref">6</a>]</span>. To implement a memory interface,
+which enabled hardware-in-the-loop learning based on membrane trace
+measurements <span class="citation"
+data-cites="cramer2022surrogate"> [<a href="#ref-cramer2022surrogate"
+role="doc-biblioref">9</a>]</span>. To implement spike routing and I/O
+for a prototype system, which enabled closed-loop experiments <span
+class="citation" data-cites="schreiber2020closed"> [<a
+href="#ref-schreiber2020closed" role="doc-biblioref">2</a>]</span> and a
+first demonstration of R-STDP reinforcement learning <span
+class="citation" data-cites="wunderlich2019demonstrating"> [<a
+href="#ref-wunderlich2019demonstrating"
+role="doc-biblioref">14</a>]</span>.</p>
+<h2 class="unnumbered"
+id="convenient-snn-training-compatible-with-deep-learning">Convenient
+SNN training compatible with Deep Learning</h2>
+<p>I created and co-develop one of the first software libraries, which
+allows non-experts to train and simulate spiking neural networks in a
+way that is readily interoperable with common concepts from deep
+learning – Norse <span class="citation" data-cites="norse2021"> [<a
+href="#ref-norse2021" role="doc-biblioref">4</a>]</span>. Prior work had
+either used programming abstractions taken from neuron simulators, like
+populations and projections or was tightly coupled to implementation
+choices of a specific publication, with little chance of reuse. Norse
+has now been adopted by several groups and is in active use.</p>
+<hr />
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-pehle2022brainscales" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div
+class="csl-right-inline">Christian Pehle, S. Billaudelle, B. Cramer, J.
+Kaiser, K. Schreiber, Y. Stradmann, J. Weis, A. Leibfried, E. Müller,
+and J. Schemmel, <em>The <span>BrainScaleS-2</span> Accelerated
+Neuromorphic System with Hybrid Plasticity</em>, Frontiers in
+Neuroscience <strong>16</strong>, (2022).</div>
+</div>
+<div id="ref-schreiber2020closed" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">K.
+Schreiber, T. C. Wunderlich, C. Pehle, M. A. Petrovici, J. Schemmel, and
+K. Meier, <em><a
+href="https://doi.org/10.1145/3381755.3381776">Closed-Loop Experiments
+on the BrainScaleS-2 Architecture</a></em>, in <em>Proceedings of the
+Neuro-Inspired Computational Elements Workshop</em> (Association for
+Computing Machinery, Heidelberg, Germany, 2020).</div>
+</div>
+<div id="ref-aamir2018accelerated" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">S.
+A. Aamir, Y. Stradmann, P. Müller, Christian Pehle, A. Hartel, A. Grübl,
+J. Schemmel, and K. Meier, <em>An Accelerated Lif Neuronal Network Array
+for a Large-Scale Mixed-Signal Neuromorphic Architecture</em>, IEEE
+Transactions on Circuits and Systems I: Regular Papers
+<strong>65</strong>, 4299 (2018).</div>
+</div>
+<div id="ref-norse2021" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[4] </div><div
+class="csl-right-inline">Christian Pehle and J. E. Pedersen, <em><span
+class="nocase">Norse - A deep learning library for spiking neural
+networks</span></em> (2021).</div>
+</div>
+<div id="ref-wunderlich2021event" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">T.
+C. Wunderlich and Christian Pehle, <em>Event-Based Backpropagation Can
+Compute Exact Gradients for Spiking Neural Networks</em>, Scientific
+Reports <strong>11</strong>, 1 (2021).</div>
+</div>
+<div id="ref-bohnstingl2019neuromorphic" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">T.
+Bohnstingl, F. Scherr, Christian Pehle, K. Meier, and W. Maass,
+<em>Neuromorphic Hardware Learns to Learn</em>, Frontiers in
+Neuroscience <strong>13</strong>, 483 (2019).</div>
+</div>
+<div id="ref-pehle2020neuromorphic" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[7] </div><div
+class="csl-right-inline">Christian Pehle and C. Wetterich, <em><a
+href="https://doi.org/10.1103/PhysRevE.106.045311">Neuromorphic Quantum
+Computing</a></em>, Phys. Rev. E <strong>106</strong>, 045311
+(2022).</div>
+</div>
+<div id="ref-pehle2022eventbased" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[8] </div><div
+class="csl-right-inline">Christian Pehle, L. Blessing, E. Arnold, E.
+Müller, and J. Schemmel, <em>Event-Based Backpropagation for Analog
+Neuromorphic Hardware</em>, In Preparation (2022).</div>
+</div>
+<div id="ref-cramer2022surrogate" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">B.
+Cramer, S. Billaudelle, S. Kanya, A. Leibfried, A. Grübl, V. Karasenko,
+Christian Pehle, K. Schreiber, Y. Stradmann, J. Weis, and others,
+<em>Surrogate Gradients for Analog Neuromorphic Computing</em>,
+Proceedings of the National Academy of Sciences <strong>119</strong>,
+e2109194119 (2022).</div>
+</div>
+<div id="ref-zador2022toward" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">A.
+Zador, B. Richards, B. Ölveczky, S. Escola, Y. Bengio, K. Boahen, M.
+Botvinick, D. Chklovskii, A. Churchland, C. Clopath, and others,
+<em>Toward Next-Generation Artificial Intelligence: Catalyzing the
+Neuroai Revolution</em>, arXiv Preprint arXiv:2210.08340 (2022).</div>
+</div>
+<div id="ref-williams1989experimental" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">R.
+J. Williams and D. Zipser, <em>Experimental Analysis of the Real-Time
+Recurrent Learning Algorithm</em>, Connection Science
+<strong>1</strong>, 87 (1989).</div>
+</div>
+<div id="ref-pehle2021adjoint" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[12] </div><div
+class="csl-right-inline">C.-G. Pehle, Adjoint Equations of Spiking
+Neural Networks, PhD thesis, 2021.</div>
+</div>
+<div id="ref-friedmann2016demonstrating" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">S.
+Friedmann, J. Schemmel, A. Grübl, A. Hartel, M. Hock, and K. Meier,
+<em>Demonstrating Hybrid Learning in a Flexible Neuromorphic Hardware
+System</em>, IEEE Transactions on Biomedical Circuits and Systems
+<strong>11</strong>, 128 (2016).</div>
+</div>
+<div id="ref-wunderlich2019demonstrating" class="csl-entry"
+role="doc-biblioentry">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">T.
+Wunderlich, A. F. Kungl, E. Müller, A. Hartel, Y. Stradmann, S. A.
+Aamir, A. Grübl, A. Heimbrecht, K. Schreiber, D. Stöckel, Christian
+Pehle, and others, <em>Demonstrating Advantages of Neuromorphic
+Computation: A Pilot Study</em>, Frontiers in Neuroscience
+<strong>13</strong>, 260 (2019).</div>
+</div>
+</div>
 </section>
+</article>
 </body>
 </html>
